@@ -618,10 +618,10 @@ function SolarisLib:New(Config)
         
         local appearance = Settings:Tab("Appearance")
         appearance:Dropdown("Theme", "The look of the user interface", {"Default", "Discord", "Red", "Green", "Blue"}, "Default", "Theme")
-
     end 
     MusicConstructor()
     SettingsConstructor()
+    MusicFrame:Remove()
 
     local function OpenTabMenu()
         TweenService:Create(MFrame.TabMenu,TweenInfo.new(0.15, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),{Position = UDim2.new(0,0,0,0)}):Play() 
