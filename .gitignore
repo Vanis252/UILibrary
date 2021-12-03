@@ -809,7 +809,9 @@ function SolarisLib:New(Config)
                 Button.ClipsDescendants = true
                 
                 Button.MouseButton1Click:Connect(function()
-                    callback()
+                    if callback then
+		    	pcall(callback)
+		    end
                     Ripple(Button)
                 end)
                 Button.MouseEnter:Connect(function()
